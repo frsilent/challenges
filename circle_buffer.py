@@ -1,5 +1,7 @@
-# Implement a circular buffer of size N. Allow the caller to append, remove and list the contents of the buffer. Implement the buffer to achieve maximum performance for each of the operations.
-#The new items are appended to the end and the order is retained i.e elements are placed in increasing order of their insertion time. When the number of elements in the list elements exceeds the defined size, the older elements are overwritten.
+# Implement a circular buffer of size N. Allow the caller to append, remove and list the contents of the buffer.
+# Implement the buffer to achieve maximum performance for each of the operations.
+# The new items are appended to the end and the order is retained i.e elements are placed in increasing order
+# of their insertion time. When the number of elements in the list elements exceeds the defined size, the older elements are overwritten.
 # 
 # 
 #There are four types of commands.
@@ -49,16 +51,20 @@
 #total number of characters in input <= 20000000.
 
 class Buffer:
+    """Circular buffer class. Allows users to append, remove and list the contents."""
+
+    
     def __init__(self,size):
-        self.size=size
+        self.size=min(size,10000)
         self.data=[]
+        full=False
 
     def append(self,x):
-
         self.data.append(x)
+        
+    def remove(self,removal_index):
+        self.get(removal_index)
 
     def get(self):
         return self.data
-
-
 
