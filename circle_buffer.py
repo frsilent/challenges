@@ -55,7 +55,7 @@ class Buffer:
 
     
     def __init__(self,size):
-        self.size=min(size,10000)
+        self.size=max(min(size,10000))
         self.data=[]
         full=False
 
