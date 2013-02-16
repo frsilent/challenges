@@ -39,19 +39,6 @@
 #Fo
 #Fum
 
-#TODO: Write Test Buffer function in order to pass provided input to Buffer class
-def TestBuffer():
-    """
-    Function for the purpose of testing the Buffer class
-    """
-    #input = std.in.readline()
-    #Buffer(input)
-
-    testingBuffer = Buffer(500)
-    testingBuffer.append(5)
-    testingBuffer.remove(10)
-
-
 class Buffer:
     """Circular buffer class. Allows users to append, remove and list the contents."""
 
@@ -62,7 +49,7 @@ class Buffer:
         of their insertion time. When the number of elements in the list elements exceeds the defined size,
         the older elements are overwritten.
         """
-        self.size = max(min(size,10000))
+        self.size = max(0,min(size,10000)) #0 <= N <= 10000
         self.data = []
         self.head = 0
         self.tail = 0
@@ -73,7 +60,7 @@ class Buffer:
         Adds to the buffer
         If the buffer is full, the oldest elements are overwritten (the head)
         """
-        if self.data.len() > self.size:
+        if len(self.data) > self.size:
             self.full = True
             self.data[self.head] = x
             self.head += 1
@@ -89,3 +76,21 @@ class Buffer:
 
     def get(self):
         return self.data
+
+
+
+f = open('/home/frsilent/git/challenges/test_data/cb_input00.txt')
+testingBuffer = Buffer(int(f.readline()))
+
+selection = f.readline()
+while selection[0] != 'Q':
+    if selection[0] == 'A':
+        for items in range(int(selection[2])):
+            testingBuffer.append(f.readline())
+    elif selection[0] == 'R':
+        pass
+    elif selection[0] == 'L':
+        pass
+    else:
+        print 'Invalid option'
+        break
