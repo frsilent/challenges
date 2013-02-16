@@ -34,4 +34,5 @@
 #all numbers will fit  in 32-bit integer.
 
 input_values = {}
+input_values.sort()
 output_values = input_values[:3]
