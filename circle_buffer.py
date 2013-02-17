@@ -31,17 +31,18 @@ class Buffer:
         Remove first n elements of the buffer. These n elements are the ones that were added earliest among the
 #       current elements.
         """
-        for items in range(x):
-            pass
+        for item in range(x):
+            del self.data[item]
+            self.head+=1
 
     def get(self):
         """
         #"L"   - List the elements of buffer in order of their inserting time.
         """
-        for item in self.data[self.head:]:
+        for item in self.data:
             print item
 
-f = open('/home/frsilent/git/challenges/test_data/cb_input00.txt')
+f = open('test_data/cb_input00.txt')
 testingBuffer = Buffer(int(f.readline()))
 
 while True:
