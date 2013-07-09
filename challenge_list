@@ -33,3 +33,7 @@ Input: DAMP, LIKE
 Output: DAMP -Ͼ LAMP -Ͼ LIME -Ͼ LIKE
 10. Given an NxN matrix of positive and negative integers, write
 code to find the submatrix with the largest possible sum.
+11. In c++, create a 2 dimensional array of triangle and square objects. iterate through it and give total area.
+12. In c++, make the equevilent of java's "arraylist".
+a) use templates b) it should use [] opperators and have an "add" method. c) it should be able to grow to any size.
+13. Using c or c++, use pthreads to spawn 4 threads. They should all try to obtain a mutex, print a message, then release the mutex. Have each print inlcude a thread id. Have each thread stop after 10 prints.
