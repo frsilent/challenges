@@ -7,7 +7,7 @@ for item in range(count):
     elements.append(int(f.readline().strip()))
 
 output = []
-list_product = reduce(lambda x, y: x * y, elements) #finds a number as a multiple of all list elements
+list_product = reduce(lambda x, y: x * y, elements)  # finds a number as a multiple of all list elements
 for new_element in range(count-1):
-    output.append(list_product /  elements[new_element])
+    output.append(list_product / elements[new_element])
 print output
