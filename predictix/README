@@ -1,0 +1,23 @@
+Predictix (Application Developer) Technical Screening
+
+We prize programming prowess in this role. As a way of demonstrating their skills, we ask
+candidates to spend no more than one hour preparing responses to three programming problems.
+We do not expect industrial strength code, but do look for a solution that is responsive to the
+problem.
+
+1. Write a function or sub-routine in your favorite programming language which, when
+given a list of integers will return the largest sum of contiguous integers in the list. For
+example, if the input is (-10, 2, 3, -2, 5, -15), the function will return 8.
+
+2. Write a function or sub-routine in your favorite programming language that will read in
+an arbitrary English text file as input, parse it into words, and print the count for each
+word. For example, if the file contained ‘la tee da tee da’, then the function would print:
+la – 1
+tee – 2
+da – 2
+
+3. Design a set of data structures to be used to implement a solitaire game such as Solitaire,
+FreeCell, or Spider Solitaire. Provide the implementation either using your favorite
+programming language or SQL. The implementation should provide the data, public
+method interface and descriptions, but does not need to provide implementations of the
+methods.
